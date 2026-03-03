@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud Operation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<!-- Cela appelle la fonction readAll() au chargement de la page, ce qui permet probablement de:
+
+Récupérer et afficher les données existantes dans le tableau
+Initialiser l'interface utilisateur avec les données actuelles stockées dans le localStorage ou une source de données similaire. -->
+<body onload="readAll()">
+    <div class="">
+        <div class="container bg-light py-3 mt-5 rounded-1 d-flex flex-column justify-content-center align-items-center" style="height: 100vh;">
+            <form action="" class="create_form">
+                <input type="text" class=" name form-control py-2  mb-3" placeholder="Enter your name">
+                <input type="text" class=" email form-control py-2  mb-3"placeholder='Enter your email'>
+                <button type="button"  class="btn btn-primary btn-lg mb-3" onclick="add()">Create</button>
+            </form>
+            <form action=""class="update_form">
+                <input type="text" class="form-control py-2  mb-3 update_id "hidden>
+                <input type="text" class="form-control py-2  mb-3 update_name"placeholder="Enter your name">
+                <input type="text" class="form-control py-2  mb-3 update_email" placeholder='Enter your email'>
+                <button type="button" class="btn btn-primary btn-lg mb-3" onclick="update()">Update</button>
+            </form>
+            <div>
+                <button class="add_div btn btn-primary" onclick="create()">Add +</button>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr scope="3">
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody class="data_table">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="Crud.js"></script>
+</body>
+</html>

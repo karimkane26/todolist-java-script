@@ -1,9 +1,9 @@
 // initialisation des données 
 let data = [
-    {name: "", email: ""}
+    {name: "kane", email: "dev@gmail.com", id: 1},
 ]
 
-
+document.addEventListener("DOMContentLoaded", readAll);
 
 // Function permettant de lister tout les données
 
